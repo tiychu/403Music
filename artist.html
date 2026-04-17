@@ -1,0 +1,70 @@
+<!--
+  403MY — 歌手 & 专辑浏览页
+
+  Copyright (C) 2026 403My
+  SPDX-License-Identifier: GPL-3.0-or-later
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>歌手 - 403Music</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23121212'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%231DB954'%3E♪%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="artist-page">
+  <div class="app artist-app">
+    <!-- 顶部标题栏 -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html" class="btn-back" id="btnBack" aria-label="返回">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </a>
+        <span class="logo-icon">♪</span>
+        <span class="logo-text">403Music</span>
+      </div>
+    </header>
+
+    <!-- 歌手列表视图 -->
+    <main class="artist-main" id="artistMain">
+      <h2 class="browse-title">歌手</h2>
+      <div class="artist-list-wrapper">
+        <div class="artist-grid" id="artistGrid"></div>
+        <nav class="letter-index" id="letterIndex"></nav>
+      </div>
+    </main>
+
+    <!-- 歌手详情视图 -->
+    <main class="artist-detail" id="artistDetail" style="display:none">
+      <div class="artist-detail-header" id="artistDetailHeader"></div>
+      <div class="artist-detail-content">
+        <h3 class="detail-section-title" id="albumSectionTitle">专辑</h3>
+        <div class="album-grid" id="albumGrid"></div>
+        <h3 class="detail-section-title" id="songSectionTitle">全部歌曲</h3>
+        <div class="detail-song-list" id="detailSongList"></div>
+      </div>
+    </main>
+
+    <!-- 专辑详情视图 -->
+    <main class="album-detail" id="albumDetail" style="display:none">
+      <div class="album-detail-header" id="albumDetailHeader"></div>
+      <div class="album-detail-content">
+        <div class="detail-song-list" id="albumSongList"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="artist.js"></script>
+</body>
+</html>
